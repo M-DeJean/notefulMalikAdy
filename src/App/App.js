@@ -47,6 +47,7 @@ class App extends Component {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name })
         })
+<<<<<<< HEAD
             .then(res => res.json())
             .then(data => {
                 const folders = this.state.folders
@@ -64,6 +65,10 @@ class App extends Component {
                 context,
                 folderId
             })
+=======
+        .then(res => res.json())
+        .then(data => { this.setState({ folders: data })
+>>>>>>> no changes
         })
             .then(res => res.json())
             .then(data => {
