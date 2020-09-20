@@ -56,13 +56,13 @@ class App extends Component {
             .catch(error => this.setState({error: 'Could not connect to server, please try again later.'}))
     }
 
-    addNote = (name, context, folderId) => {
+    addNote = (name, content, folderId) => {
         fetch(`${config.API_ENDPOINT}/notes`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 name,
-                context,
+                content,
                 folderId,
                 modified: new Date()
             })
